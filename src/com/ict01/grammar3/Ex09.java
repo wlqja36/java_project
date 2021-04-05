@@ -1,4 +1,4 @@
-ssssssssssssssssspackage com.ict01.grammar3;
+package com.ict01.grammar3;
 class Ex09{
 	public static  void main (String[] args){
 
