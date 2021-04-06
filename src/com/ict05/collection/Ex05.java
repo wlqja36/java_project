@@ -50,8 +50,8 @@ public class Ex05 {
 			System.out.println(stack.indexOf("둘리")+"번째 위치");
 			System.out.println(stack.search("둘리")+"번째 위치");
 			System.out.println(stack.get(1));
-			System.out.println(stack.get(stack.indexOf("둘리"))); //둘리라는 단어를 찾아서 출력까지 한번에
-			System.out.println(stack.elementAt(stack.indexOf("둘리"))); //둘리라는 단어를 찾아서 출력까지 한번에
+			System.out.println(stack.get(stack.indexOf("둘리"))); //둘리라는 단어를 찾아서 출력까지 한번에 - 배열식 
+			System.out.println(stack.elementAt(stack.indexOf("둘리"))); //둘리라는 단어를 찾아서 출력까지 한번에 - stack식
 			System.out.println(stack.firstElement());
 			System.out.println(stack.lastElement());
 			
