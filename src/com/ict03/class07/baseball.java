@@ -10,7 +10,7 @@ public class baseball {
 	// 야구게임은 다음주 월요일까지
 
 	public static void main(String[] args) {
-
+		
 		Random r = new Random();
 		Scanner sc = new Scanner(System.in);
 
