@@ -7,7 +7,7 @@ public class Ex13 implements Runnable{
 	
 	// 동기화 처리 : 임계영역에 synchronized 예약어를 사용하면 된다.
 	//				 그러면 현재 실행중인 스레드가 끝날때 까지 임계 영역에 다른 스레드가
-	//				 접근해서 제어권을 빼았을수 없다.
+	//				 접근해서 제어권을 빼았을 수 없다.
 	
 	@Override
 	public synchronized void run() {
