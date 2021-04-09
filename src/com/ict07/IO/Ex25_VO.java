@@ -2,6 +2,8 @@ package com.ict07.IO;
 
 import java.io.Serializable;
 
+
+// ***** input output에서가 아닌 VO에서 계산하는거 해보기(sum,avg,학점등) 
 public class Ex25_VO implements Serializable{
 	
 	private String name;
