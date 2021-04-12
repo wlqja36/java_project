@@ -3,87 +3,87 @@ package com.ict03.class02;
 import java.util.Random;
 import java.util.Scanner;
 
-//°¡À§¹ÙÀ§º¸ °è¼ÓÇÒ°ÇÁö ¹°¾îº¸°í ±×¸¸ÇßÀ»¶§ÀÇ ½Â·ü³ª¿À°Ô
-// ÄÄÇ»ÅÍ´Â ·£´ıÀ¸·Î °¡À§(0), ¹ÙÀ§(1), º¸(2)¸¦ °®´Â´Ù
-// »ç¿ëÀÚ´Â °¡À§¹ÙÀ§º¸¸¦ ¼±ÅÃÇØ¼­ ÄÄÇ»ÅÍ¿Í °ÔÀÓÀ»ÇÑ´Ù
-//¾ß±¸°ÔÀÓ . (9¹ø¾È¿¡ ¸ÂÃç¾ßÇÔ. 9¹ø³ÑÀ¸¸é Á¾·á, 3¾Æ¿ôµÇµµ Á¾·á, ¸ÂÃçµµ Á¾·á)
-// »ç¿ëµÇ´Â ¼ıÀÚ´Â 0~9 ¼­·Î ´Ù¸¥¼ıÀÚ, ¼ıÀÚ¸ÂÁö¸¸ À§Ä¡°¡Æ²¸®¸é º¼, ¼ıÀÚ¿Í À§Ä¡°¡ ¸ÂÀ¸¸é ½ºÆ®¶óÀÌÅ©, ¼ıÀÚ¿Í À§Ä¡°¡ ¸Â´Â°Ô¾øÀ¸¸é ¾Æ¿ô
-// ¾ß±¸°ÔÀÓÀº ´ÙÀ½ÁÖ ¿ù¿äÀÏ±îÁö
+//ê°€ìœ„ë°”ìœ„ë³´ ê³„ì†í• ê±´ì§€ ë¬¼ì–´ë³´ê³  ê·¸ë§Œí–ˆì„ë•Œì˜ ìŠ¹ë¥ ë‚˜ì˜¤ê²Œ
+// ì»´í“¨í„°ëŠ” ëœë¤ìœ¼ë¡œ ê°€ìœ„(0), ë°”ìœ„(1), ë³´(2)ë¥¼ ê°–ëŠ”ë‹¤
+// ì‚¬ìš©ìëŠ” ê°€ìœ„ë°”ìœ„ë³´ë¥¼ ì„ íƒí•´ì„œ ì»´í“¨í„°ì™€ ê²Œì„ì„í•œë‹¤
+//ì•¼êµ¬ê²Œì„ . (9ë²ˆì•ˆì— ë§ì¶°ì•¼í•¨. 9ë²ˆë„˜ìœ¼ë©´ ì¢…ë£Œ, 3ì•„ì›ƒë˜ë„ ì¢…ë£Œ, ë§ì¶°ë„ ì¢…ë£Œ)
+// ì‚¬ìš©ë˜ëŠ” ìˆ«ìëŠ” 0~9 ì„œë¡œ ë‹¤ë¥¸ìˆ«ì, ìˆ«ìë§ì§€ë§Œ ìœ„ì¹˜ê°€í‹€ë¦¬ë©´ ë³¼, ìˆ«ìì™€ ìœ„ì¹˜ê°€ ë§ìœ¼ë©´ ìŠ¤íŠ¸ë¼ì´í¬, ìˆ«ìì™€ ìœ„ì¹˜ê°€ ë§ëŠ”ê²Œì—†ìœ¼ë©´ ì•„ì›ƒ
+// ì•¼êµ¬ê²Œì„ì€ ë‹¤ìŒì£¼ ì›”ìš”ì¼ê¹Œì§€
 public class Ex04 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Random r = new Random();
 /*
-		String[] cpu = { "°¡À§", "¹ÙÀ§", "º¸" };
+		String[] cpu = { "ê°€ìœ„", "ë°”ìœ„", "ë³´" };
 		int cnt = 0;
 		int win = 0;
 		a:
 		while (true) {
 			int ran = r.nextInt(2);
-			System.out.print("cpu¿Í °¡À§¹ÙÀ§º¸ ÇÕ´Ï´Ù. ¼ıÀÚ·Î ÀÔ·ÂÇØÁÖ¼¼¿ä (1-°¡À§, 2-¹ÙÀ§, 3-º¸)");
+			System.out.print("cpuì™€ ê°€ìœ„ë°”ìœ„ë³´ í•©ë‹ˆë‹¤. ìˆ«ìë¡œ ì…ë ¥í•´ì£¼ì„¸ìš” (1-ê°€ìœ„, 2-ë°”ìœ„, 3-ë³´)");
 			int user = sc.nextInt();
 			if (ran == 0) {
 				if (user == 1) {
-					System.out.println("ºñ°å½À´Ï´Ù.");
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 					cnt++;
 				} else if (user == 2) {
-					System.out.println("ÀÌ°å½À´Ï´Ù.");
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤.");
 					cnt++;
 					win++;
 				} else if (user == 3) {
-					System.out.println("Á³½À´Ï´Ù.");
+					System.out.println("ì¡ŒìŠµë‹ˆë‹¤.");
 					cnt++;
 				} else {
-					System.out.println("ÁöÁ¤µÈ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+					System.out.println("ì§€ì •ëœ ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				}
 
 			}
 			if (ran == 1) {
 				if (user == 1) {
-					System.out.println("Á³½À´Ï´Ù.");
+					System.out.println("ì¡ŒìŠµë‹ˆë‹¤.");
 					cnt++;
 				} else if (user == 2) {
-					System.out.println("ºñ°å½À´Ï´Ù.");
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 					cnt++;
 
 				} else if (user == 3) {
-					System.out.println("ÀÌ°å½À´Ï´Ù.");
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤.");
 					cnt++;
 					win++;
 				} else {
-					System.out.println("ÁöÁ¤µÈ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+					System.out.println("ì§€ì •ëœ ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				}
 			}
 			if (ran == 2) {
 				if (user == 1) {
-					System.out.println("ÀÌ°å½À´Ï´Ù.");
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤.");
 					cnt++;
 					win++;
 				} else if (user == 2) {
-					System.out.println("Á³½À´Ï´Ù.");
+					System.out.println("ì¡ŒìŠµë‹ˆë‹¤.");
 					cnt++;
 				} else if (user == 3) {
-					System.out.println("ºñ°å½À´Ï´Ù.");
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 					cnt++;
 				} else {
-					System.out.println("ÁöÁ¤µÈ ¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+					System.out.println("ì§€ì •ëœ ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				}
 			}
 			while (true) {
-				System.out.println("´õ ÇÏ½Ã°Ú½À´Ï±î? yes or no");
+				System.out.println("ë” í•˜ì‹œê² ìŠµë‹ˆê¹Œ? yes or no");
 				String conti = sc.next();
 				if (conti.equalsIgnoreCase("no") || conti.equalsIgnoreCase("n")) {
 					break a;
 				} else if (conti.equalsIgnoreCase("yes") || conti.equalsIgnoreCase("y")) {
 					break;
 				} else {
-					System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+					System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				}
 			}
 		}
 		int rate = (int)((win / (cnt * 10.0)) * 1000.0);
-		System.out.println("´ç½ÅÀÇ ½Â·üÀº : " + rate + "% ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì˜ ìŠ¹ë¥ ì€ : " + rate + "% ì…ë‹ˆë‹¤.");
 		*/
 		
 		
@@ -92,38 +92,38 @@ public class Ex04 {
 		esc:
 		while(true) {
 			totalcount++;
-			//ÄÄÇ»ÅÍ
+			//ì»´í“¨í„°
 			int computer = (int)(Math.random()*3); // 0,1,2
-			System.out.print("1.°¡À§ 2.¹ÙÀ§, 3.º¸");
+			System.out.print("1.ê°€ìœ„ 2.ë°”ìœ„, 3.ë³´");
 			int user = sc.nextInt();
 			if(computer==0) {
 				if(user==1) {
-					System.out.println("ºñ±è");
+					System.out.println("ë¹„ê¹€");
 				}else if(user ==2) {
-					System.out.println("ÀÌ±è");
+					System.out.println("ì´ê¹€");
 				}else if(user ==3) {
-					System.out.println("Áü");
+					System.out.println("ì§");
 				}
 				
 			}else if(computer ==1) {
 				if(user==1) {
-					System.out.println("Áü");
+					System.out.println("ì§");
 				}else if(user ==2) {
-					System.out.println("ºñ±è");
+					System.out.println("ë¹„ê¹€");
 				}else if(user ==3) {
-					System.out.println("ÀÌ±è");
+					System.out.println("ì´ê¹€");
 				}
 			}else if(computer ==2) {
 				if(user==1) {
-					System.out.println("ÀÌ±è");
+					System.out.println("ì´ê¹€");
 				}else if(user ==2) {
-					System.out.println("Áü");
+					System.out.println("ì§");
 				}else if(user ==3) {
-					System.out.println("ºñ±è");
+					System.out.println("ë¹„ê¹€");
 				}
 			}
 			while(true) {
-				System.out.println("°è¼ÓÇÒ±î¿ä?(y/n) >>");
+				System.out.println("ê³„ì†í• ê¹Œìš”?(y/n) >>");
 				String msg = sc.next();
 				if(msg.equalsIgnoreCase("y")) {
 					continue esc;
@@ -134,8 +134,8 @@ public class Ex04 {
 				}
 			}
 		}
-		System.out.println("¼ö°íÇÏ¼Ì½À´Ï´Ù.");
-		System.out.println("´ç½ÅÀÇ µµÀüÈ½¼ö : "+totalcount+", ½Â·ü : " + (vcnt/totalcount)*100+"%");
+		System.out.println("ìˆ˜ê³ í•˜ì…¨ìŠµë‹ˆë‹¤.");
+		System.out.println("ë‹¹ì‹ ì˜ ë„ì „íšŸìˆ˜ : "+totalcount+", ìŠ¹ë¥  : " + (vcnt/totalcount)*100+"%");
 		
 		
 		

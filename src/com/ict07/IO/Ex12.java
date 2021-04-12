@@ -11,11 +11,11 @@ public class Ex12 {
 		
 		
 		// 읽는 위치
-		String pathname_1 = "C:" + File.separator + "Beomstudy" + File.separator + "util" + File.separator + "java_2.jpg";
+		String pathname_1 = "C:" + File.separator + "Beomstudy" + File.separator + "util" + File.separator + "java_1.png";
 		File read_file = new File(pathname_1);
 		
 		// 쓰는 위치
-		String pathname_2 = "C:" + File.separator + "Beomstudy" + File.separator + "util" + File.separator + "res" + File.separator+"java_2.jpg";
+		String pathname_2 = "C:" + File.separator + "Beomstudy" + File.separator + "util" + File.separator + "res" + File.separator+"java_1.png";
 		File write_file = new File(pathname_2);
 		
 		// 먼저 읽어서 쓰기
@@ -59,7 +59,7 @@ public class Ex12 {
 				fis.close();
 				// 파일이 열려 있으면 삭제할 수 없다.
 				// 읽은파일 삭제
-				read_file.delete();
+				//read_file.delete();
 			} catch (Exception e2) {
 				System.out.println(e2);
 			}

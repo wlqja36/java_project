@@ -4,67 +4,67 @@ import java.util.Random;
 
 public class Ex03 {
 	public static void main(String[] args) {
-		// ·£´ı : Math.random(), Random Å¬·¡½º
+		// ëœë¤ : Math.random(), Random í´ë˜ìŠ¤
 
-		// 1. Random Å¬·¡½º
+		// 1. Random í´ë˜ìŠ¤
 		Random r = new Random();
 
-		// °¢Á¾ ÀÚ·áÇüÀÇ µ¥ÀÌÅÍ¸¦ ¹«ÀÛÀ§·Î ÃßÃâ
+		// ê°ì¢… ìë£Œí˜•ì˜ ë°ì´í„°ë¥¼ ë¬´ì‘ìœ„ë¡œ ì¶”ì¶œ
 
-		System.out.println("boolean Çü : " + r.nextBoolean());
-		System.out.println("int Çü : " + r.nextInt());
-		System.out.println("long Çü : " + r.nextLong());
+		System.out.println("boolean í˜• : " + r.nextBoolean());
+		System.out.println("int í˜• : " + r.nextInt());
+		System.out.println("long í˜• : " + r.nextLong());
 
-		// ½Ç¼öÇüÅÂ´Â 0.0ÀÌ»ó ~ 1.0¹Ì¸¸
-		System.out.println("float Çü : " + r.nextFloat());
-		System.out.println("double Çü : " + r.nextDouble());
+		// ì‹¤ìˆ˜í˜•íƒœëŠ” 0.0ì´ìƒ ~ 1.0ë¯¸ë§Œ
+		System.out.println("float í˜• : " + r.nextFloat());
+		System.out.println("double í˜• : " + r.nextDouble());
 		System.out.println();
 
-		// Æ¯Á¤ ¹üÀ§¸¦ ÁöÁ¤ÇØ¼­ »ç¿ëÇÏ´Â ¹æ¹ı
-		// 1)nextInt(Á¤¼ö) : 0 ~ Á¤¼öÀü±îÁö ³­ ¼ö ¹ß»ı
+		// íŠ¹ì • ë²”ìœ„ë¥¼ ì§€ì •í•´ì„œ ì‚¬ìš©í•˜ëŠ” ë°©ë²•
+		// 1)nextInt(ì •ìˆ˜) : 0 ~ ì •ìˆ˜ì „ê¹Œì§€ ë‚œ ìˆ˜ ë°œìƒ
 		int s1 = r.nextInt(3); // 0~2
 		System.out.println(s1);
 
-		// 2) (int)(nextDouble() * ¼ıÀÚ) : 0~Á¤¼öÀü±îÁö ³­¼ö ¹ß»ı
+		// 2) (int)(nextDouble() * ìˆ«ì) : 0~ì •ìˆ˜ì „ê¹Œì§€ ë‚œìˆ˜ ë°œìƒ
 		int s2 = (int) (r.nextDouble() * 3);// 0~2
 		System.out.println(s2);
 
-		// 2. Math Å¬·¡½º : »ı¼ºÀÚ°¡ ¾ø´Ù.
-		// ¸Ş¼Òµå µéÀÌ staticÀÌ´Ù.
-		// °´Ã¼ »ı¼º ¾øÀÌ È£Ãâ °¡´É
-		// 1) random() : 0.0 ~ 1.0 ¹Ì¸¸
+		// 2. Math í´ë˜ìŠ¤ : ìƒì„±ìê°€ ì—†ë‹¤.
+		// ë©”ì†Œë“œ ë“¤ì´ staticì´ë‹¤.
+		// ê°ì²´ ìƒì„± ì—†ì´ í˜¸ì¶œ ê°€ëŠ¥
+		// 1) random() : 0.0 ~ 1.0 ë¯¸ë§Œ
 		System.out.println(Math.random());
 
-		// 2) Æ¯Á¤ ¹üÀ§¸¦ ÁöÁ¤ÇÒ ¶§
+		// 2) íŠ¹ì • ë²”ìœ„ë¥¼ ì§€ì •í•  ë•Œ
 		int s3 = (int) (Math.random() * 3); // 0~2
 		System.out.println(s3);
 		
 		
-		// 3) abs : Àı´ë°ª ¹İÈ¯
+		// 3) abs : ì ˆëŒ€ê°’ ë°˜í™˜
 		System.out.println(Math.abs(100));
 		System.out.println(Math.abs(-100));
 		
-		// 4) ceil(¿Ã¸²), round(¹İ¿Ã¸²), floor(¹ö¸²)
-		System.out.println("¿Ã¸² :" + Math.ceil(3.45));
-		System.out.println("¿Ã¸² :" + Math.ceil(3.55));
+		// 4) ceil(ì˜¬ë¦¼), round(ë°˜ì˜¬ë¦¼), floor(ë²„ë¦¼)
+		System.out.println("ì˜¬ë¦¼ :" + Math.ceil(3.45));
+		System.out.println("ì˜¬ë¦¼ :" + Math.ceil(3.55));
 		
-		System.out.println("¹ö¸² :" + Math.floor(3.45));
-		System.out.println("¹ö¸² :" + Math.floor(3.55));
+		System.out.println("ë²„ë¦¼ :" + Math.floor(3.45));
+		System.out.println("ë²„ë¦¼ :" + Math.floor(3.55));
 		
-		System.out.println("¹İ¿Ã¸² :" + Math.round(3.45));
-		System.out.println("¹İ¿Ã¸² :" + Math.round(3.55));
+		System.out.println("ë°˜ì˜¬ë¦¼ :" + Math.round(3.45));
+		System.out.println("ë°˜ì˜¬ë¦¼ :" + Math.round(3.55));
 		
 		
 		
-		// 5) max µÑ Áß Å« °ª Ã£±â
-		//    min µÑ Áß ÀÛÀº °ª Ã£±â
+		// 5) max ë‘˜ ì¤‘ í° ê°’ ì°¾ê¸°
+		//    min ë‘˜ ì¤‘ ì‘ì€ ê°’ ì°¾ê¸°
 		System.out.println("max : " + Math.max(44.9, 45));
 		System.out.println("min : " + Math.min(-44.9, -45));
 		
-		// 6) pow(double a, double b) : Á¦°ö
+		// 6) pow(double a, double b) : ì œê³±
 		
-		System.out.println(Math.pow(2, 3)); //2ÀÇ 3½Â
-		System.out.println(Math.pow(3, 2)); //3ÀÇ 2½Â
+		System.out.println(Math.pow(2, 3)); //2ì˜ 3ìŠ¹
+		System.out.println(Math.pow(3, 2)); //3ì˜ 2ìŠ¹
 		
 
 		

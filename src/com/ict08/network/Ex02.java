@@ -39,7 +39,7 @@ public class Ex02 {
 				
 			}
 			
-			//System.out.println(sb.toString());
+			System.out.println(sb.toString());
 			
 			fw = new FileWriter(file);
 			bw = new BufferedWriter(fw);

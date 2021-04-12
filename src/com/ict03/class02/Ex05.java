@@ -2,10 +2,10 @@ package com.ict03.class02;
 
 public class Ex05 {
 	public static void main(String[] args) {
-		// StringBuffer, StringBuilder -> ¹®ÀÚ¿­À» ºó¹øÇÏ°Ô ¼öÁ¤, »èÁ¦, Ãß°¡ÇÒ °æ¿ì »ç¿ëÀ» ±ÇÀåÇÑ´Ù.
+		// StringBuffer, StringBuilder -> ë¬¸ìì—´ì„ ë¹ˆë²ˆí•˜ê²Œ ìˆ˜ì •, ì‚­ì œ, ì¶”ê°€í•  ê²½ìš° ì‚¬ìš©ì„ ê¶Œì¥í•œë‹¤.
 
-		// StringÀº ºÒº¯ÀÇ ¼Ó¼ºÀ» °¡Áö°í ÀÖ¾î¼­ ¸Ş¸ğ¸®¿¡ »õ·Î¿î ¿µ¿ªÀ» Â÷ÁöÇØ¼­ hello java »õ·Î¸¸µç´Ù.
-		// ±×·¸±â ¶§¹®¿¡ StringBuffer-append¸¦ ¾´´Ù.
+		// Stringì€ ë¶ˆë³€ì˜ ì†ì„±ì„ ê°€ì§€ê³  ìˆì–´ì„œ ë©”ëª¨ë¦¬ì— ìƒˆë¡œìš´ ì˜ì—­ì„ ì°¨ì§€í•´ì„œ hello java ìƒˆë¡œë§Œë“ ë‹¤.
+		// ê·¸ë ‡ê¸° ë•Œë¬¸ì— StringBuffer-appendë¥¼ ì“´ë‹¤.
 		String msg = "hello";
 		msg = msg + " java";
 		System.out.println(msg);
@@ -13,8 +13,8 @@ public class Ex05 {
 		StringBuffer sb = new StringBuffer("welcome");
 		System.out.println(sb);
 		
-		// StringBuffer´Â °¡º¯Çü¼Ó¼ºÀ» °¡Áö°íÀÖ´Ù.
-		// ³»¿ëÀ» Ãß°¡ÇÒ ¶§(append("¹®ÀÚ¿­"); )
+		// StringBufferëŠ” ê°€ë³€í˜•ì†ì„±ì„ ê°€ì§€ê³ ìˆë‹¤.
+		// ë‚´ìš©ì„ ì¶”ê°€í•  ë•Œ(append("ë¬¸ìì—´"); )
 		sb.append(" to Java");
 		System.out.println(sb.toString());
 
