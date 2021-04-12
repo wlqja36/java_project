@@ -1,6 +1,5 @@
 package com.ict03.class06;
 
-import java.util.Iterator;
 
 // 열거형(enum) : 상수를 하나의 객체로 인식하고
 //				  여러 개의 상수 객체들을 한 곳에 모아 둔 하나의 묶음(객체)
