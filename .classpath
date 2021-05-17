@@ -6,7 +6,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Beomstudy/util/01_프로그래밍활용/json-simple-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Beomstudy/util/01_프로그래밍활용/json-simple-1.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Beomstudy/util/05_SQL활용/mysql-connector-java-8.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Beomstudy/util/04_데이터베이스구현/oracle/sqldeveloper/jdbc/lib/ojdbc8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
